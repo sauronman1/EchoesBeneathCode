@@ -23,7 +23,7 @@ public class Book : MonoBehaviour, IInteractable
         _bookDoor = transform.parent.parent.gameObject.GetComponent<BookPuzzle>();
         _parentTransform = transform.parent;
         _textMesh = _parentTransform.GetChild(1).GetComponent<TextMeshPro>();
-        BookPuzzle.books.Add(this.gameObject, this.GetComponent<Book>());
+        _bookDoor.books.Add(this.gameObject, this.GetComponent<Book>());
     }
 
     public void Interact()
